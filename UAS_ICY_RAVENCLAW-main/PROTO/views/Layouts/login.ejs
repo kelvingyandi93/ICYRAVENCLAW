@@ -1,0 +1,377 @@
+<html>
+    <head>
+        <title>Login-ICY</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet" href="style_login.css">
+        <link rel="icon" href="C:\Joshua\Kuliah Semester 3\Web Programming (8 sks)\Project_UTS\Project_Beneran\Icons\favicon.ico">
+        <link rel = "icon" href = 
+        "https://i.ibb.co/7rWKwZS/1.jpg" 
+        type = "image/x-icon">
+        <style>
+            /*body {
+                --base-color: #010815;
+                --base-color-2: #14279B;
+                --base-color-3: #5C7AEA;
+                --base-color-4: #3D56B2;
+                --base-color-5: rgb(46, 49, 49);
+                --base-color-6: #FFB319;
+            }*/
+
+            .loader {
+                position: fixed;
+                z-index: 99;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background:black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+
+                .loader > img {
+                width: 250px;
+                }
+
+                .loader.hidden {
+                animation: fadeOut 1s;
+                animation-fill-mode: forwards;
+                }
+
+                @keyframes fadeOut {
+                100% {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                }
+            .bodyhtml {
+                background: black;
+            }
+            .navbar {
+                border: 2px solid #5c7aea;
+                box-shadow: none;
+            }
+            .bg-color1 {
+                background: #5c7aea;
+            }
+            .navbar .navigasi-1 {
+                font-size: 20pt;
+                font-family: 'Black Ops One', cursive;
+                color: black;
+                text-decoration: none;
+            }
+            .navbar .navigasi-1:hover {
+                color: black;
+            }
+            .navbar .navigasi-2 {
+                color: black;
+                font-family: 'Black Ops One', cursive;
+                text-decoration: none;
+                position: relative;
+            }
+            .navbar .navigasi-2::after {
+                content: '';
+                height: 3px;
+                width: 0;
+                background: black;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                transition: 0.5s;
+            }
+            .navbar .navigasi-2:hover::after {
+                width: 100%;
+            }
+            .bg-color2 {
+                background-color: transparent;
+            }
+            .card-1 {
+                margin: 0%;
+                margin-left: 5%;
+                border-radius: 10px;
+                position: relative;
+                box-shadow: none;
+                border: 2px solid #5c7aea;
+            }
+            .card-2 {
+                color: #5c7aea;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 18pt;
+                text-align: center;
+                border: none;
+            }
+            .card-font {
+                color: #5c7aea;
+                font-family: sans-serif;
+            }
+            .card-input {
+                border-radius: 20px;
+                position: relative;
+            }
+            .card-input:focus {
+                border: 2px solid #5c7aea;
+            }
+            .btn-color3 {
+                color: black;
+                font-family: sans-serif;
+                background: #5c7aea;
+            }
+            .card-fontkecil {
+                font-size: 10pt;
+                color:#5c7aea;
+                text-decoration: none;
+            }
+            .card-fontkecil:hover {
+                font-weight: bold;
+            }
+            .gambar {
+                margin-top: 4%;
+                display: flex;
+            }
+            .main {
+                margin-top: 3%;
+                display: flex;
+                justify-content: center;
+            }
+            .main .card .material-icons {
+                font-size: 50pt;
+            }
+            .card-fontsedang {
+                color: #5c7aea;
+                font-family: sans-serif;
+                font-size: 10pt;
+            }
+            .forget-pass {
+                margin-right: 26%;
+                font-size: 10pt;
+            }
+            .forget-pass:hover {
+                border: none;
+                font-weight: normal;
+                color: #5c7aea;
+            }
+            .show-pass {
+                cursor: pointer;
+                color: #5c7aea;
+                font-size: 10pt;
+            }
+            .show-pass:hover {
+                color: #5c7aea;
+                text-decoration: none;
+            }
+            .btn-color3:hover {
+                height: 38px;
+                color: #5c7aea;
+                background: transparent;
+                border: 2px solid #5c7aea;
+            }
+
+            @media (max-width: 980px) {
+                .bodyhtml {
+                    background: black;
+                }
+                .navbar {
+                    box-shadow: none;
+                    border: 2px solid #5c7aea;
+                }
+                .navbar .navigasi-1:hover {
+                    color: black;
+                }
+                .navbar .navigasi-1 {
+                    font-size: 50pt;
+                    font-family: 'Black Ops One', cursive;
+                    color: black;
+                    text-decoration: none;
+                }
+                .navbar .navigasi-2 {
+                    color: black;
+                    font-family: 'Black Ops One', cursive;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 24pt;
+                }
+                .navbar .navigasi-2::after {
+                    content: '';
+                    height: 3px;
+                    width: 0;
+                    background: black;
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    transition: 0.5s;
+                }
+                .navbar .navigasi-2:hover::after {
+                    width: 100%;
+                }
+                .card-1 {
+                    margin: 0%;
+                    margin-left: 5%;
+                    border-radius: 10px;
+                    position: relative;
+                    box-shadow: none;
+                }
+                .card-2 {
+                    color: #5c7aea;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    font-size: 50pt;
+                    text-align: center;
+                    border: none;
+                }
+                .card-font {
+                    color: #5c7aea;
+                    font-family: sans-serif;
+                    font-size: 24pt;
+                }
+                .card-input {
+                    border-radius: 20px;
+                    position: relative;
+                    height: 60px;
+                    font-size: 20pt;
+                }
+                .card-input:focus {
+                    border: 2px solid var(--base-color);
+                }
+                .btn-color3 {
+                    color: #5c7aea;
+                    font-family: sans-serif;
+                }
+                .btn-color3:hover {
+                    color: black;
+                    background: transparent;
+                    border: 2px solid #5c7aea;
+                }
+                .card-fontkecil {
+                    font-size: 12pt;
+                    color: #5c7aea;
+                    text-decoration: none;
+                }
+                .gambar {
+                    display: none;
+                }
+                .main {
+                    margin-top: 5%;
+                    margin-right: 5%;
+                    justify-content: center;
+                }
+                .main .card .material-icons {
+                    font-size: 100pt;
+                }
+                .card-fontsedang {
+                    color: #5c7aea;
+                    font-family: sans-serif;
+                    font-size: 20pt;
+                }
+                .form-check-label {
+                    font-size: 20pt;
+                    border-radius: 20px;
+                }
+                .forget-pass {
+                    margin-right: 26%;
+                    font-size: 20pt;
+                }
+                .forget-pass:hover {
+                    border: none;
+                    font-weight: normal;
+                }
+                .show-pass {
+                    cursor: pointer;
+                    color: #5c7aea;
+                    font-size: 20pt;
+                }
+                .show-pass:hover {
+                    color: #5c7aea;
+                    text-decoration: none;
+                }
+                input[type='checkbox'] {
+                    width:30px;
+                    height:30px;
+                    background:white;
+                    border-radius:5px;
+                    border:2px solid #555;
+                    margin-right: 1%;
+                }
+                input[type='checkbox']:checked {
+                    background: #abd;
+                }
+            }
+        </style>
+        <script>
+            function showpass(){
+                const pass = document.getElementById("passwordaja");
+                const hide = document.getElementById("hide");
+                if (pass.type === "password") {
+                    pass.type = "text";
+                    hide.innerHTML = "hide password";
+                }
+                else {
+                    pass.type = "password";
+                    hide.innerHTML = "show password";
+                }
+            }
+        </script>
+    </head>
+    <body class="bodyhtml">
+        <div class="loader">
+            <img src="https://i.ibb.co/7rWKwZS/1.jpg" alt="Loading..." />
+        </div>
+        <nav class="navbar navbar-dark bg-color1">
+            <a class="navbar-brand navigasi-1" href="login_beneran.html">ICY</a>
+            <ul class="navbar-nav" style="display: flex;">
+                <li class="nav-item">
+                    <a class="navigasi-2" href="sign_up.html" >Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="gambar">
+                    <img style="object-fit: cover; margin: 3px; margin-top: 70px; border-radius: 10px;" width="150px" height="300px" src="https://source.unsplash.com/collection/user/erondu">
+                    <img style="object-fit: cover; margin: 3px; margin-bottom: 70px; border-radius: 10px;" width="150px" height="300px" src="https://source.unsplash.com/collection/user/thisisareku">
+                    <img style="object-fit: cover; margin: 3px; margin-top: 70px; border-radius: 10px;" width="150px" height="300px" src="https://source.unsplash.com/collection/user/micheile">
+                    <img style="object-fit: cover; margin: 3px; margin-bottom: 70px; border-radius: 10px;" width="150px" height="300px" src="https://source.unsplash.com/collection/user/melakii">
+            </div>
+            <div class="card text-white bg-color2 card-1">
+                <div class="card-header card-2">
+                    <span class="material-icons">account_box</span>
+                    <br>
+                    Login
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="card-font" style="font-weight: bold;" for="email">Email :</label>
+                            <input class="card-input form-control" name="username" placeholder="Email" type="email" id="email" aria-describedby="emailHelp" required>
+                            <small class="form-text card-fontsedang" id="emailHelp">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="card-font" style="font-weight: bold;" for="password">Password :</label>
+                            <input placeholder="Password" type="password" name="password" class="card-input form-control" id="passwordaja" required>
+                            <a class="card-fontkecil forget-pass" href="forgetpass_beneran.html">Forgot password?</a>
+                            <a class="show-pass" id="hide" onclick="showpass()">show password</a>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="card-input form-check-input" id="exampleCheck1">
+                            <label class="form-check-label card-fontsedang" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button class="card-input btn btn-block btn-color3" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script>
+            window.addEventListener("load", function () {
+              const loader = document.querySelector(".loader");
+              loader.className += " hidden"; // class "loader hidden"
+            });
+          </script>
+    </body>
+</html>
